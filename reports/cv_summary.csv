@@ -1,0 +1,37 @@
+scheme,model,MAE,RMSE,MAPE_%,R2,subset
+forward-chaining,"1. Baseline: log-linear (distance, equipment)",104.7,144.3,4.4,0.98811,clean
+forward-chaining,2. Linear (all features + calendar terms),58.6,79.0,2.755,0.99668,clean
+forward-chaining,3. Gradient boosting only,54.0,82.1,2.375,0.99613,clean
+forward-chaining,4. Linear + boosted residuals (no calendar terms),49.7,68.6,2.202,0.9974,clean
+forward-chaining,5. As 4 + linear trend only (no quarter-end ramp),60.7,87.5,2.459,0.99477,clean
+forward-chaining,6. Final: calendar-aware linear + boosted residuals,37.8,56.1,1.559,0.9981,clean
+unseen cities (Sep-Oct),"1. Baseline: log-linear (distance, equipment)",82.8,114.7,3.492,0.99302,clean
+unseen cities (Sep-Oct),2. Linear (all features + calendar terms),60.0,81.7,2.655,0.99642,clean
+unseen cities (Sep-Oct),3. Gradient boosting only,55.1,76.5,2.322,0.99688,clean
+unseen cities (Sep-Oct),4. Linear + boosted residuals (no calendar terms),65.4,88.2,2.653,0.99591,clean
+unseen cities (Sep-Oct),5. As 4 + linear trend only (no quarter-end ramp),37.8,53.6,1.562,0.99849,clean
+unseen cities (Sep-Oct),6. Final: calendar-aware linear + boosted residuals,32.9,46.7,1.375,0.99885,clean
+random 5-fold (optimistic),"1. Baseline: log-linear (distance, equipment)",92.9,130.4,4.105,0.99072,clean
+random 5-fold (optimistic),2. Linear (all features + calendar terms),54.7,73.5,2.605,0.99705,clean
+random 5-fold (optimistic),3. Gradient boosting only,28.8,42.9,1.301,0.999,clean
+random 5-fold (optimistic),4. Linear + boosted residuals (no calendar terms),27.6,40.2,1.195,0.99912,clean
+random 5-fold (optimistic),5. As 4 + linear trend only (no quarter-end ramp),27.6,40.1,1.189,0.99912,clean
+random 5-fold (optimistic),6. Final: calendar-aware linear + boosted residuals,27.3,39.6,1.178,0.99914,clean
+forward-chaining,"1. Baseline: log-linear (distance, equipment)",158.0,646.4,6.693,0.81948,raw
+forward-chaining,2. Linear (all features + calendar terms),112.4,629.0,5.114,0.82898,raw
+forward-chaining,3. Gradient boosting only,107.8,630.7,4.689,0.82801,raw
+forward-chaining,4. Linear + boosted residuals (no calendar terms),103.5,629.6,4.517,0.82861,raw
+forward-chaining,5. As 4 + linear trend only (no quarter-end ramp),114.3,627.6,4.852,0.82965,raw
+forward-chaining,6. Final: calendar-aware linear + boosted residuals,91.7,625.1,3.935,0.83109,raw
+unseen cities (Sep-Oct),"1. Baseline: log-linear (distance, equipment)",142.7,662.1,6.002,0.81285,raw
+unseen cities (Sep-Oct),2. Linear (all features + calendar terms),120.2,656.2,5.163,0.8161,raw
+unseen cities (Sep-Oct),3. Gradient boosting only,115.3,655.8,4.799,0.81623,raw
+unseen cities (Sep-Oct),4. Linear + boosted residuals (no calendar terms),125.4,658.2,5.111,0.815,raw
+unseen cities (Sep-Oct),5. As 4 + linear trend only (no quarter-end ramp),98.1,650.4,4.095,0.81927,raw
+unseen cities (Sep-Oct),6. Final: calendar-aware linear + boosted residuals,93.3,650.3,3.904,0.81939,raw
+random 5-fold (optimistic),"1. Baseline: log-linear (distance, equipment)",142.4,602.6,6.471,0.83538,raw
+random 5-fold (optimistic),2. Linear (all features + calendar terms),104.7,591.8,4.98,0.84124,raw
+random 5-fold (optimistic),3. Gradient boosting only,79.1,588.4,3.686,0.84304,raw
+random 5-fold (optimistic),4. Linear + boosted residuals (no calendar terms),77.9,588.1,3.583,0.84321,raw
+random 5-fold (optimistic),5. As 4 + linear trend only (no quarter-end ramp),77.8,588.1,3.576,0.84324,raw
+random 5-fold (optimistic),6. Final: calendar-aware linear + boosted residuals,77.6,588.1,3.563,0.84324,raw

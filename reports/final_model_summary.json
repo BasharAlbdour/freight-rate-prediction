@@ -1,0 +1,54 @@
+{
+  "boost_params": {
+    "learning_rate": 0.05,
+    "max_iter": 300,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 50,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "n_train_rows": 48000,
+  "n_train_rows_used": 47323,
+  "n_label_outliers_removed": 677,
+  "linear_coefficients": {
+    "log_distance": 0.8712930411806373,
+    "is_reefer": 0.12145662400444249,
+    "is_flatbed": 0.08013750623783865,
+    "mi": 0.14245335031299555,
+    "t_days": 0.0001974538393120351,
+    "qend_ramp": 0.04026416708293787
+  },
+  "linear_intercept": 1.4150128445423258,
+  "validation_pred_rate": {
+    "count": 12000.0,
+    "mean": 2391.5,
+    "std": 1379.28,
+    "min": 193.99,
+    "25%": 1293.88,
+    "50%": 2070.89,
+    "75%": 3392.16,
+    "max": 6987.38
+  },
+  "train_posted_rate_clean": {
+    "count": 47323.0,
+    "mean": 2347.28,
+    "std": 1353.68,
+    "min": 184.55,
+    "25%": 1262.32,
+    "50%": 2032.37,
+    "75%": 3314.22,
+    "max": 7498.05
+  },
+  "december": {
+    "min": 823.66,
+    "max": 881.94,
+    "mean": 851.0609677419353,
+    "per_mile_mean": 2.3640582437275985
+  },
+  "lexington_fort_wayne_dry_van_history": {
+    "n": 21,
+    "mean_rate": 823.3142857142857,
+    "mean_rate_per_mile": 2.2624015030865317,
+    "last_month_in_train_mean": 834.1700000000001
+  }
+}

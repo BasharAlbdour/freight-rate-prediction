@@ -1,0 +1,4 @@
+model,scheme,fold,subset,n_test,MAE,RMSE,MAPE_%,R2
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,May-Jun,clean,9571,29.416815167921676,43.03023907623007,1.2231720009003133,0.9990578314814268
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,Jul-Aug,clean,9538,54.386598357251884,83.12102983733757,2.173219625322253,0.9961725976031989
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,Sep-Oct,clean,9379,29.46222799344106,42.005243277514815,1.279805050088693,0.9990670709385387

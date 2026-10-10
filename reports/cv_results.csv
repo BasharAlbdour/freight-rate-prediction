@@ -1,0 +1,145 @@
+model,scheme,fold,subset,n_test,MAE,RMSE,MAPE_%,R2
+"1. Baseline: log-linear (distance, equipment)",forward-chaining,May-Jun,raw,9696,205.21277544883392,667.9316675385219,8.16787456226836,0.8135971048507977
+"1. Baseline: log-linear (distance, equipment)",forward-chaining,May-Jun,clean,9571,152.70382835969752,207.35084173103638,6.051174737237268,0.9781227527015279
+"1. Baseline: log-linear (distance, equipment)",forward-chaining,Jul-Aug,raw,9671,134.38429826668664,631.4912686360015,5.883310977145477,0.8205247900516118
+"1. Baseline: log-linear (distance, equipment)",forward-chaining,Jul-Aug,clean,9538,82.75283475347032,116.27979099540079,3.6392505885005497,0.9925098454515889
+"1. Baseline: log-linear (distance, equipment)",forward-chaining,Sep-Oct,raw,9523,134.45719861012194,639.6444861375226,6.026865708670918,0.8243134783299902
+"1. Baseline: log-linear (distance, equipment)",forward-chaining,Sep-Oct,clean,9379,78.73570889683198,109.23276462669183,3.5098949113779927,0.9936911897634023
+2. Linear (all features + calendar terms),forward-chaining,May-Jun,raw,9696,111.44739561312412,631.2769784506689,4.935758481886983,0.833494536735979
+2. Linear (all features + calendar terms),forward-chaining,May-Jun,clean,9571,57.84451373847957,77.85381679694603,2.668012039952359,0.9969158116793045
+2. Linear (all features + calendar terms),forward-chaining,Jul-Aug,raw,9671,112.28709518716954,621.9071051971281,5.177811874639292,0.8259312514663911
+2. Linear (all features + calendar terms),forward-chaining,Jul-Aug,clean,9538,60.365440763015044,81.20631020718025,2.8847475114760814,0.9963468975718752
+2. Linear (all features + calendar terms),forward-chaining,Sep-Oct,raw,9523,113.32271930617998,633.802874805019,5.229169678447917,0.8275077715474078
+2. Linear (all features + calendar terms),forward-chaining,Sep-Oct,clean,9379,57.441963995433184,77.90115288391236,2.7131754205229837,0.9967912980128641
+3. Gradient boosting only,forward-chaining,May-Jun,raw,9696,94.0792132963989,630.2363060379525,3.924611024782479,0.8340430592460941
+3. Gradient boosting only,forward-chaining,May-Jun,clean,9571,40.307641867612524,65.59413006502933,1.6576558279701534,0.9978106710293851
+3. Gradient boosting only,forward-chaining,Jul-Aug,raw,9671,123.21090586791674,627.8652360742852,5.505150186322099,0.8225799714441716
+3. Gradient boosting only,forward-chaining,Jul-Aug,clean,9538,71.6049623530478,111.36999000023809,3.311129503647777,0.9931290204622266
+3. Gradient boosting only,forward-chaining,Sep-Oct,raw,9523,106.00845176964965,633.9994130984695,4.635978157570951,0.8274007774460682
+3. Gradient boosting only,forward-chaining,Sep-Oct,clean,9379,50.05039162809445,69.39011858861862,2.154996707817911,0.997454126194213
+4. Linear + boosted residuals (no calendar terms),forward-chaining,May-Jun,raw,9696,90.18329736809252,629.474960561047,3.7931231509996937,0.8344437795703459
+4. Linear + boosted residuals (no calendar terms),forward-chaining,May-Jun,clean,9571,36.29535501251157,53.03779320960514,1.5160998514125599,0.9985686298304975
+4. Linear + boosted residuals (no calendar terms),forward-chaining,Jul-Aug,raw,9671,102.6212390560107,623.4334615457901,4.671044865382385,0.8250757636228794
+4. Linear + boosted residuals (no calendar terms),forward-chaining,Jul-Aug,clean,9538,50.648683484925876,69.2638667848506,2.4631844826529252,0.9973423623955374
+4. Linear + boosted residuals (no calendar terms),forward-chaining,Sep-Oct,raw,9523,117.81971000587629,636.0229066344278,5.085757356976018,0.8262972724638793
+4. Linear + boosted residuals (no calendar terms),forward-chaining,Sep-Oct,clean,9379,62.10272018830086,83.61660710683385,2.62687687260034,0.9963031936979281
+5. As 4 + linear trend only (no quarter-end ramp),forward-chaining,May-Jun,raw,9696,96.5130594662915,626.6431134899336,4.062835161807045,0.8359300192280084
+5. As 4 + linear trend only (no quarter-end ramp),forward-chaining,May-Jun,clean,9571,42.8219525853909,63.66478736343909,1.7490157919130394,0.9979375679144096
+5. As 4 + linear trend only (no quarter-end ramp),forward-chaining,Jul-Aug,raw,9671,155.67044832170953,627.6724962717205,6.4656391749371975,0.8226888822442711
+5. As 4 + linear trend only (no quarter-end ramp),forward-chaining,Jul-Aug,clean,9538,104.56956677402059,149.07700673813298,4.139816834312004,0.9876887082817652
+5. As 4 + linear trend only (no quarter-end ramp),forward-chaining,Sep-Oct,raw,9523,90.72890934729662,628.5950263241391,4.028491080000199,0.8303308030692941
+5. As 4 + linear trend only (no quarter-end ramp),forward-chaining,Sep-Oct,clean,9379,34.62307920584673,49.74571489793486,1.4891089286398604,0.998691562549031
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,May-Jun,raw,9696,83.32656423318669,627.0809939331954,3.514877851859831,0.8357006442127958
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,May-Jun,clean,9571,29.416815167921676,43.03023907623007,1.2231720009003133,0.9990578314814268
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,Jul-Aug,raw,9671,106.25071896031857,619.5924024420113,4.4718057400993905,0.8272245880134187
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,Jul-Aug,clean,9538,54.386598357251884,83.12102983733757,2.173219625322253,0.9961725976031989
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,Sep-Oct,raw,9523,85.66994675476343,628.564790944521,3.8188666865106176,0.8303471248312783
+6. Final: calendar-aware linear + boosted residuals,forward-chaining,Sep-Oct,clean,9379,29.46222799344106,42.005243277514815,1.279805050088693,0.9990670709385387
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group1,raw,2116,133.57059615981257,617.4447078593238,6.183897770898843,0.8045588738668316
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group1,clean,2086,83.48329609195704,115.10211774093949,3.804162474854811,0.9914234331459506
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group1,raw,2116,114.20408712213822,610.4833890780187,5.411707241555828,0.8089409939052605
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group1,clean,2086,63.967966585763584,85.93610873580525,3.0232145520919627,0.9952192259553719
+3. Gradient boosting only,unseen cities (Sep-Oct),group1,raw,2116,107.16628799639523,610.638379621098,4.835579498919314,0.8088439688308369
+3. Gradient boosting only,unseen cities (Sep-Oct),group1,clean,2086,56.84343776192488,78.83525216293027,2.454209158414482,0.9959766504017904
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group1,raw,2116,111.89907674377083,610.3180158546244,5.008198715732283,0.8090444914442652
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group1,clean,2086,61.82468432776081,82.6074952488074,2.6433284171318268,0.9955824064315035
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group1,raw,2116,85.6332935405165,602.8618953644481,3.99558852460233,0.8136817139932407
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group1,clean,2086,35.26818895199689,49.23783136780118,1.5579733430406264,0.9984305601268734
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group1,raw,2116,80.62826539772402,601.837056321609,3.7736753712942113,0.8143146415515808
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group1,clean,2086,30.21239754334558,41.80918235302243,1.3456889915975834,0.9988684071427839
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group2,raw,2433,150.51437692824567,631.8304784310064,6.040088949380663,0.8496436441935983
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group2,clean,2399,96.66671379633432,132.61313825832514,3.408695434604129,0.9922142222815142
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group2,raw,2433,121.46446185153839,622.8595373230785,5.097129470473254,0.8538829534119474
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group2,clean,2399,67.38151423231193,92.9111408383907,2.4663821022846557,0.9961782305830611
+3. Gradient boosting only,unseen cities (Sep-Oct),group2,raw,2433,113.49226308318693,620.309728141433,4.741542393267943,0.8550768276833678
+3. Gradient boosting only,unseen cities (Sep-Oct),group2,clean,2399,59.494806197194784,82.26100362003176,2.130693232441498,0.9970041718114337
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group2,raw,2433,128.81472949475926,623.6013535582539,5.118724948904182,0.8535346997929336
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group2,clean,2399,75.11402903032322,100.66498752594069,2.5361979150561043,0.9955137261165304
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group2,raw,2433,99.19557304155624,614.8783553204361,4.222651939943424,0.8576035839739902
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group2,clean,2399,45.00246965078049,62.75906536379447,1.553683329372611,0.9982562595994714
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group2,raw,2433,93.89239779493084,615.1454461322662,4.04161285996547,0.8574798488177086
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group2,clean,2399,39.614092813415766,55.817594816338364,1.3783156133322718,0.9986206606282922
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group3,raw,2448,138.44088144349004,673.759209165367,6.794625224717688,0.7984001484796136
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group3,clean,2399,70.4267128553542,99.08784577396383,3.291584802592499,0.9944676427731897
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group3,raw,2448,117.90587029461022,669.870483409909,5.932437788719028,0.8007205742947163
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group3,clean,2399,49.58544039382047,67.5963495161537,2.4429879862047597,0.9974253634679202
+3. Gradient boosting only,unseen cities (Sep-Oct),group3,raw,2448,115.1123577166757,669.8088160673628,5.614483674767358,0.800757263377923
+3. Gradient boosting only,unseen cities (Sep-Oct),group3,clean,2399,47.11775954836172,65.33485126882051,2.2134575588964567,0.9975947553622583
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group3,raw,2448,125.23257524844362,672.3724360466518,6.063693263569529,0.799229185125031
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group3,clean,2399,57.38895226956655,76.82260696400947,2.6875125263487654,0.9966745721997596
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group3,raw,2448,102.07899945397642,665.8605569494972,5.050251002302087,0.8030992553062511
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group3,clean,2399,33.85389275769731,48.98190784998683,1.5767034600884324,0.9986481116192205
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group3,raw,2448,97.34559961076295,665.0471792124497,4.8521248080079875,0.8035800072069419
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group3,clean,2399,29.040332036076222,41.44251673269247,1.379584569152954,0.9990322533324094
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group4,raw,2399,148.3496328337323,725.1693618180863,4.988986776380652,0.7988099580905543
+"1. Baseline: log-linear (distance, equipment)",unseen cities (Sep-Oct),group4,clean,2367,80.52012401885214,111.9084122791085,3.4648233348274924,0.993954717932713
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group4,raw,2399,127.07225224384402,721.4379111478355,4.21240162827848,0.8008751287009782
+2. Linear (all features + calendar terms),unseen cities (Sep-Oct),group4,clean,2367,58.95520771772434,80.48550521110533,2.687900234158215,0.9968730103043736
+3. Gradient boosting only,unseen cities (Sep-Oct),group4,raw,2399,125.40637740112852,722.5893287231852,4.00475249556477,0.8002390134219477
+3. Gradient boosting only,unseen cities (Sep-Oct),group4,clean,2367,57.03753519137793,79.59612820741894,2.490630994035382,0.9969417358986706
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group4,raw,2399,135.5109727147139,726.314499179259,4.25456313849662,0.7981740455603307
+4. Linear + boosted residuals (no calendar terms),unseen cities (Sep-Oct),group4,clean,2367,67.08416737719958,92.56973678095497,2.7450917480788966,0.9958635368588726
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group4,raw,2399,105.61935781531318,718.1593709370375,3.1106832453221003,0.8026808433434384
+5. As 4 + linear trend only (no quarter-end ramp),unseen cities (Sep-Oct),group4,clean,2367,37.03608005714817,53.5025984694247,1.5589620270541358,0.9986182137997589
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group4,raw,2399,101.5235151481984,719.0338374950746,2.946651999209169,0.8022000195517662
+6. Final: calendar-aware linear + boosted residuals,unseen cities (Sep-Oct),group4,clean,2367,32.81610788886448,47.80402025743245,1.3946260666752688,0.9988968871474081
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold1,raw,9600,138.11040438936539,538.7232352672718,6.331095346133561,0.8642952377182427
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold1,clean,9471,94.10088434672028,132.66814393731804,4.1032972506227035,0.9904637698550204
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold2,raw,9600,141.86137786715022,619.7919144549016,6.330647339399135,0.8250815284388316
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold2,clean,9468,91.52949830517707,128.66420800923842,4.0798899897508685,0.9907489666079592
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold3,raw,9600,144.8882248410296,626.2019311163675,6.736598559032271,0.824403495537205
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold3,clean,9460,91.76565899545561,128.396757904393,4.105046093500038,0.991046630069208
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold4,raw,9600,145.96057991932656,626.5123156280963,6.507837561817446,0.828560294347071
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold4,clean,9464,94.37620817468411,132.51350744530254,4.130463350684113,0.9905729906402306
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold5,raw,9600,141.31691367089365,601.9970132574736,6.448908647327474,0.8345410984670834
+"1. Baseline: log-linear (distance, equipment)",random 5-fold (optimistic),fold5,clean,9460,92.86684345669714,129.62593697665304,4.104597383392493,0.9907806012415891
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold1,raw,9600,99.4041444813422,527.5214882989568,4.864873798581218,0.8698800210346067
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold1,clean,9471,54.73805175494303,73.77326787427506,2.600953868183912,0.9970512261939793
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold2,raw,9600,105.1423481322628,609.7657386707709,4.878740989086526,0.830694955360158
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold2,clean,9468,54.40766571854741,72.86176200109065,2.6097629205703825,0.9970332968999089
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold3,raw,9600,108.07650289561744,614.964863446115,5.250530517403386,0.830649038577297
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold3,clean,9460,54.632243310149526,73.3408471842787,2.617947427487738,0.9970787396901231
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold4,raw,9600,107.01002899072446,615.9280047052183,4.96303758591408,0.8343039753716894
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold4,clean,9464,54.977734001078495,74.0747925832832,2.5883337280395358,0.9970542592143715
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold5,raw,9600,103.66659979182049,590.7478319227214,4.9426850855305595,0.8406669988404634
+2. Linear (all features + calendar terms),random 5-fold (optimistic),fold5,clean,9460,54.84570258251982,73.63971967817487,2.6074953404078056,0.9970246159161038
+3. Gradient boosting only,random 5-fold (optimistic),fold1,raw,9600,74.25295502647533,524.5187432332333,3.5660694197818676,0.8713571366332891
+3. Gradient boosting only,random 5-fold (optimistic),fold1,clean,9471,29.29755640628391,44.47599025230233,1.3056772508157801,0.9989282470937391
+3. Gradient boosting only,random 5-fold (optimistic),fold2,raw,9600,79.56781986458125,605.6538525017652,3.565906602918429,0.8329706352778702
+3. Gradient boosting only,random 5-fold (optimistic),fold2,clean,9468,28.584127512364216,42.030005861747355,1.2925321546618505,0.9990128261383564
+3. Gradient boosting only,random 5-fold (optimistic),fold3,raw,9600,82.44000877059773,611.7962775050725,3.9573740564011515,0.832389693019716
+3. Gradient boosting only,random 5-fold (optimistic),fold3,clean,9460,28.646876090493812,41.91439374737006,1.3064624202105721,0.9990458760636846
+3. Gradient boosting only,random 5-fold (optimistic),fold4,raw,9600,81.3109526663472,612.8397984644412,3.6911599149156302,0.835961379082337
+3. Gradient boosting only,random 5-fold (optimistic),fold4,clean,9464,28.891535325771486,43.44948282617055,1.2993886536141799,0.9989865020779206
+3. Gradient boosting only,random 5-fold (optimistic),fold5,raw,9600,77.96029725836448,587.2589747434298,3.6478261473721574,0.8425434292171626
+3. Gradient boosting only,random 5-fold (optimistic),fold5,clean,9460,28.829054831212563,42.59166420309077,1.2998417335738828,0.9990046679198671
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold1,raw,9600,72.73095205945818,524.6382950532753,3.458466370047738,0.8712984876666038
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold1,clean,9471,27.707618482647753,40.444915246435244,1.1918078184468963,0.9991137193317979
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold2,raw,9600,78.48396102740305,605.540070844846,3.4731348140948306,0.8330333875995479
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold2,clean,9468,27.44714159705557,40.17642886666676,1.1909727734960849,0.9990979774202946
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold3,raw,9600,81.27778358926936,611.3567100504971,3.8494061859542024,0.8326304580295207
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold3,clean,9460,27.495846928770725,39.65765498958558,1.1994957446830032,0.9991458532870727
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold4,raw,9600,80.21450759119185,612.4665249593559,3.586009974183877,0.8361611462108087
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold4,clean,9464,27.80530858287944,40.53482915725853,1.196235108886089,0.9991179152098846
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold5,raw,9600,76.59395549803709,586.5802198616983,3.5457376769470215,0.8429071959976155
+4. Linear + boosted residuals (no calendar terms),random 5-fold (optimistic),fold5,clean,9460,27.469355247248483,39.936419854824265,1.1958410130457173,0.9991249012948931
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold1,raw,9600,72.98232669621345,524.2904139120387,3.4578959394548607,0.8714691118290329
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold1,clean,9471,27.989436503238277,40.70042253854716,1.1935048146526883,0.9991024859559751
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold2,raw,9600,78.44627954040962,605.8356275644815,3.4635958938322444,0.8328703590908495
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold2,clean,9468,27.38683639909071,40.115188290191995,1.1813847617498061,0.9991007252146167
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold3,raw,9600,81.45439031143789,611.437870670827,3.848713137405318,0.8325860168144767
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold3,clean,9460,27.689783533020496,40.074127506003066,1.2004857828774806,0.9991278191139756
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold4,raw,9600,79.85705159993164,612.1670670101688,3.57275394546106,0.8363213210148743
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold4,clean,9464,27.455308970051842,40.01577425979063,1.1834906453867822,0.9991403610430689
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold5,raw,9600,76.49277103570184,586.5356166421499,3.5352016466331224,0.8429310855806289
+5. As 4 + linear trend only (no quarter-end ramp),random 5-fold (optimistic),fold5,clean,9460,27.367347135748265,39.74102134027681,1.187451057461523,0.9991334436066764
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold1,raw,9600,72.46882324948788,524.353044814516,3.441621673514441,0.8714384018021882
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold1,clean,9471,27.470947286839753,39.971152005867786,1.1782136352490828,0.9991343611337966
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold2,raw,9600,78.24322074545783,605.7545698399371,3.4537339090645887,0.8329150782902821
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold2,clean,9468,27.197014374120844,39.65359396159822,1.1725845859100683,0.9991213015567635
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold3,raw,9600,81.07494919276678,611.4528391193804,3.833493657244856,0.8325778198793894
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold3,clean,9460,27.2965158965851,39.433092573197776,1.1845519715061057,0.9991554991517932
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold4,raw,9600,79.63145713937682,612.2459430045232,3.5632703391852414,0.8362791392282858
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold4,clean,9464,27.239137516787675,39.628578036235155,1.175916617207254,0.999156916445316
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold5,raw,9600,76.41212823630349,586.4552401206695,3.524647026515424,0.8429741308368734
+6. Final: calendar-aware linear + boosted residuals,random 5-fold (optimistic),fold5,clean,9460,27.282326850371756,39.405232432588,1.176684211755446,0.9991480255528657
