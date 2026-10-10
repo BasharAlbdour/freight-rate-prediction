@@ -75,4 +75,4 @@ scorer_results/               candidate_december.png from score.py
 - GitHub repository containing your code, dependencies, and run instructions
 - `validation_predictions.csv`
 - PDF or DOCX report containing your validation, data split approach and `candidate_december.png`
-- 2-3 minute Loom link (talking points in `LOOM_SCRIPT.md`)
+- 2-3 minute Loom link
